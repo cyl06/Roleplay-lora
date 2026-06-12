@@ -1,0 +1,44 @@
+models:
+  # ---- LoRA fine-tuned models ----
+  qwen15_roleplay:
+    display_name: "Qwen2.5-1.5B + roleplay"
+    base_model: "Qwen/Qwen2.5-1.5B-Instruct"
+    adapter_path: "./roleplay-lora-output/final-lora-adapter"
+    train_dataset: "hieunguyenminh/roleplay"
+
+  qwen15_npc:
+    display_name: "Qwen2.5-1.5B + npc-dialogue"
+    base_model: "Qwen/Qwen2.5-1.5B-Instruct"
+    adapter_path: "./roleplay-lora-qwen1-5b/final-lora-adapter"
+    train_dataset: "amaydle/npc-dialogue"
+
+  qwen3_npc:
+    display_name: "Qwen2.5-3B + npc-dialogue"
+    base_model: "Qwen/Qwen2.5-3B-Instruct"
+    adapter_path: "./roleplay-lora-qwen3b/final-lora-adapter"
+    train_dataset: "amaydle/npc-dialogue"
+
+  phi35_npc:
+    display_name: "Phi-3.5-mini + npc-dialogue"
+    base_model: "microsoft/Phi-3.5-mini-instruct"
+    adapter_path: "./roleplay-lora-extra/final-lora-adapter"
+    train_dataset: "amaydle/npc-dialogue"
+
+  # ---- Base models (no LoRA) for comparison ----
+  qwen15_base:
+    display_name: "Qwen2.5-1.5B (base)"
+    base_model: "Qwen/Qwen2.5-1.5B-Instruct"
+    adapter_path: null
+    train_dataset: null
+
+  qwen3_base:
+    display_name: "Qwen2.5-3B (base)"
+    base_model: "Qwen/Qwen2.5-3B-Instruct"
+    adapter_path: null
+    train_dataset: null
+
+  phi35_base:
+    display_name: "Phi-3.5-mini (base)"
+    base_model: "microsoft/Phi-3.5-mini-instruct"
+    adapter_path: null
+    train_dataset: null
